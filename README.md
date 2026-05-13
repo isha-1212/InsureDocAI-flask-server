@@ -94,8 +94,6 @@ The Django backend automatically communicates with the Flask ML server:
 ```
 ML/
 ├── requirements.txt            # Flask + ML dependencies (torch, transformers)
-├── start_ml_server.bat        # Windows startup script
-├── start_ml_server.sh         # Linux/Mac startup script
 ├── src/
 │   ├── Inference.py            # LayoutLMv3 model inference engine
 │   ├── pipeline.py             # Document extraction pipeline
@@ -107,8 +105,7 @@ ML/
     ├── kyc_pipeline.py         # KYC document extraction (Aadhaar, PAN)
     ├── aadhar_extractor.py     # Aadhaar OCR extraction
     └── pan_extractor.py        # PAN OCR extractionxtractor.py
-└── kyc/
-    └── kyc_pipeline.py
+
 ```
 
 ## Testing
@@ -126,9 +123,3 @@ curl -X POST \
   http://localhost:5001/extract
 ```
 
-## Production Deployment
-
-Use Gunicorn for production:
-```bash
-gunicorn -w 4 -b 0.0.0.0:5001 ml_flask_server:app
-```
