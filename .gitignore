@@ -1,0 +1,110 @@
+# ==================== ML Flask Server .gitignore ====================
+
+# ======================== PYTHON/FLASK ========================
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Flask
+instance/
+.webassets-cache
+.flask_session
+
+# ======================== MACHINE LEARNING ========================
+# Model files
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.onnx
+*.pb
+*.tflite
+*.pth
+*.pt
+*.bin
+*.safetensors
+
+# Large model directories (but keep structure)
+models/
+checkpoints/
+saved_models/
+model_cache/
+.cache/
+huggingface_hub/
+
+# Training outputs
+runs/
+logs/
+tensorboard/
+wandb/
+mlruns/
+
+# ======================== ENVIRONMENT & CONFIG ========================
+# Virtual environments
+.env
+.venv/
+venv/
+ENV/
+env/
+
+# Environment variables
+.env.local
+.env.development
+.env.production
+config.ini
+
+# ======================== IDE & SYSTEM ========================
+# VS Code
+.vscode/
+*.code-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# ======================== LOGS & TEMP ========================
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*~
+
+# ======================== TESTING ========================
+.coverage
+.pytest_cache/
+.tox/
+
+# ======================== KEEP IMPORTANT STRUCTURE ========================
+# But exclude large input files - keep only configs
+inputs/layoutlmv3Microsoft/
+inputs/data/
+!inputs/*.json
+!inputs/Training_layoutLMV3.json
+
+# Exclude large data directories
+data/hospital/
+data/pharmacy/
